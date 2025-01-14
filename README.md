@@ -20,7 +20,7 @@
 
 ## Project Description
 
-Este projeto visa a resolução de um case proposto pela empresa Modak como parte de um processo avaliativo. O objetivo é realizar uma análise detalhada e encontrar discrepâncias e ou padrões nas tabelas de backend utilizadas para pagamentos. 
+This project aims to solve a case proposed by Modak as part of an evaluation process. The goal is to conduct a detailed analysis and identify discrepancies and/or patterns in the backend tables used for payments.
 
 ## Technologies Used
 :hammer:
