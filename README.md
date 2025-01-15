@@ -126,8 +126,8 @@ After completing these steps, you will need to create the images used in the pro
       ```sh
       make deploy_airflow
    
-    Pode-se verficar se o ambiente foi provisionados através dos comandos:
-    - Verificar ambiente Airflow:
+ -The environment provisioning can be verified using the following commands:
+    - Check the Airflow environment::
       ```sh
       make watch_airflow
   
