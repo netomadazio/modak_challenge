@@ -1,5 +1,6 @@
 import logging
 import pandas as pd
+from datetime import datetime, timedelta
 
 def _check_values_allowance_backend(allowance_events_df, allowance_backend_df):
     """
@@ -12,6 +13,9 @@ def _check_values_allowance_backend(allowance_events_df, allowance_backend_df):
     Returns:
         pd.DataFrame: The inconsistencies found between the two tables.
     """
+    allowance_events_df['event_timestamp'] = pd.to_datetime(allowance_events_df['event_timestamp'])
+    allowance_events_df['event_timestamp'] = allowance_events_df['event_timestamp'].astype(int) // 10**9
+    
     errors = []
     try:
         allowance_events_df = allowance_events_df.sort_values(by='event_timestamp') \
