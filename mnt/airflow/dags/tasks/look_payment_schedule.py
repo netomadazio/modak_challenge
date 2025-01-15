@@ -23,7 +23,6 @@ def _check_values_payment_schedule_backend(payment_schedule_backend_df):
         for column, count in null_counts.items():
             if count > 0:
                 error_message = f"Column '{column}' contains {count} null values."
-                logging.warning(error_message)
                 errors.append(error_message)
     except Exception as e:
         errors.append(f"Error during null value check: {str(e)}")
@@ -35,7 +34,6 @@ def _check_values_payment_schedule_backend(payment_schedule_backend_df):
         
         if not duplicate_values.empty:
             error_message = f"The 'payment_schedule_backend' table has duplicate values: \n{duplicate_values}"
-            # logging.warning(error_message)
             errors.append(error_message)
     except Exception as e:
         errors.append(f"Error during duplicate value check: {str(e)}")
@@ -45,7 +43,6 @@ def _check_values_payment_schedule_backend(payment_schedule_backend_df):
         invalid_payment_date = payment_schedule_backend_df[(payment_schedule_backend_df['payment_date'] < 1) | (payment_schedule_backend_df['payment_date'] > 31)]
         if not invalid_payment_date.empty:
             error_message = f"The 'payment_schedule_backend' table has invalid payment dates: \n{invalid_payment_date}"
-            logging.warning(error_message)
             errors.append(error_message)
     except Exception as e:
         errors.append(f"Error during invalid payment date check: {str(e)}")
@@ -96,7 +93,6 @@ def look_for_inconsistencies(**kwargs):
 
     if errors:
         error_summary = "Errors found during execution:\n" + "\n".join(errors)
-        # logging.error(error_summary)
         raise Exception(error_summary)
     else:
         logging.info("All checks passed successfully.")
