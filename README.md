@@ -71,7 +71,7 @@ Within the tasks, validations, error handling, and exception management were imp
 
 If the tasks encounter errors, it would indicate the existence of inconsistencies in the data, identified through validation tests, or an error in the pipeline processing. To make the process more complete and robust, a good implementation would be to automate the sending of emails or even a message in a corporate chat, notifying the need to verify the data.
 
-The second stage of the approach involved an exploratory data analysis. This allowed for a deeper investigation of the data to identify inconsistencies, patterns, behaviors, and potential causes. A notebook was used to create a report containing the analyses performed, insights gathered, relevant points, and observations. The file is available in the repository and can be re-executed, if necessary, to include new analyses and findings.
+The second stage of the approach involved an exploratory data analysis. This allowed for a deeper investigation of the data to identify inconsistencies, patterns, behaviors, and potential causes. A notebook was used to create a report containing the analyses performed, insights gathered, relevant points, and observations. The file is available in the repository and can be re-executed, if necessary, to include new analyses and findings.(The file to be analyzed is located at 'exploratory_data_analysis/exploratory_data_analysis.ipynb')
 
 ## Improvement Points
 
